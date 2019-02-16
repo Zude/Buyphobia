@@ -1,0 +1,123 @@
+[
+
+  {
+    "url": "/assets/*",
+    "static": "assets/*"
+  },
+
+  {
+    "url": "/",
+    "method": ["get"],
+    "page": "index"
+  },
+
+  {
+    "url": "/index",
+    "method": ["get"],
+    "page": "index"
+  },
+
+  {
+    "url": "/produkte",
+    "method": ["get"],
+    "controller": {
+      "file": "pagecontroller",
+      "function": "loadDataProd"
+    },
+    "params" : {
+      "get": ["search"]
+    }
+  },
+
+  {
+    "url": "/impressum",
+    "method": ["get"],
+    "page": "impressum"
+  },
+
+  {
+    "url": "/details",
+    "method": ["get"],
+    "controller": {
+      "file": "pagecontroller",
+      "function": "loadDataDet"
+    },
+    "params" : {
+      "get": ["dts"]
+    }
+  },
+
+  {
+    "url": "/cart",
+    "method": ["get"],
+    "controller": {
+      "file": "warenkorbController",
+      "function": "loadCart"
+    }
+   
+  },
+
+  {
+    "url": "/fillToCart",
+    "method": ["POST"],
+    "controller": {
+      "file": "warenkorbController",
+      "function": "fill"
+    }
+   
+  },
+
+  {
+    "url": "/newCart",
+    "method": ["POST"],
+    "controller": {
+      "file": "warenkorbController",
+      "function": "deleteProd"
+    }
+   
+  },
+
+  {
+    "url": "/bestellen",
+    "method": ["get"],
+    "page": "order"
+  },
+
+  {
+    "url": "/kaufen",
+    "method": ["POST"],
+    "controller": {
+      "file": "orderController",
+      "function": "completeOrder"
+    }
+  },
+
+  {
+    "url": "/rating",
+    "method": ["POST"],
+    "controller": {
+      "file": "ratingController",
+      "function": "handleRating"
+    }
+  },
+
+  {
+    "url": "/print",
+    "method": ["GET"],
+    "controller": {
+      "file": "printController",
+      "function": "handlePrintView"
+    },
+    "params" : {
+      "get": ["id"]
+    }
+  },
+
+  {
+    "url": "/*",
+    "method": ["get"],
+    "page": "siteError"
+  }
+
+
+]

@@ -1,0 +1,24 @@
+<!-- Product View Template -->
+
+<!-- Search function -->
+<label>
+ Suche: <input id="search">
+</label>
+
+<!-- Fill up Page -->
+<div class="prodansi">
+  {{#each page.prods}}
+  <div class="prods" onclick="location.href='http://localhost:8080/details?dts={{dername}}';">
+    <div class="part1"> {{dername}} </div>
+    <div class="part2"> {{text}} </div>
+    <div class="part3">
+     <img class="imgu" src="assets/{{dername}}.jpg" alt="product-picture">
+   </div>	
+   <div class="part4" data-price={{price}}> Price:${{price}}  / Stock: {{stock}}  </div>
+ </div>
+ {{/each}}  
+</div>  
+
+
+<script src="assets/js/search.js"></script>
+

@@ -1,0 +1,121 @@
+import { InMemoryDbService } from 'angular-in-memory-web-api';
+
+export class InMemoryDataService implements InMemoryDbService {
+  createDb() {
+    let products = [
+         
+        {
+            "dername": "Xanthophobia",
+            "text": "Fear of Yellow",
+            "details": "Yelllllllllllllllooooow",
+            "facts": [
+                "Yellllow",
+                "Lemons are yellow"
+            ],
+            "stock": 20,
+            "price": 15,
+            "slider": "true"
+        },
+        {
+            "dername": "Zemmiphobia",
+            "text": "Fear of The Great Mole Rat",
+            "details": "An obscure and mysterious mole rat that takes presence in the rituals and practices of many underground cults esp. in the New Mexico area.",
+            "facts": [
+                "Look at this picture, lmao",
+                "mysterious"
+            ],
+            "stock": 0,
+            "price": 20,
+            "slider": "true"
+        },
+        {
+            "dername": "Philophobia",
+            "text": "Fear of Love",
+            "facts": [
+                "Very Common",
+                "Almost free"
+            ],
+            "stock": 7,
+            "price": 1,
+            "slider": "true"
+        },
+        {
+            "dername": "Anatidaephobia",
+            "text": "Fear of Being Watched by A Duck",
+            "facts": [
+                "???",
+                "?????"
+            ],
+            "stock": 18,
+            "price": 27,
+            "slider": "true"
+        },
+        {
+            "dername": "Pentheraphobia",
+            "text": "Fear of Your Mother In-Law",
+            "facts": [
+                "alltime classic",
+                "they ARE scary"
+            ],
+            "stock": 2,
+            "price": 20,
+            "slider": "true"
+        },
+        {
+            "dername": "Ergophobia",
+            "text": "Fear of Work",
+            "facts": [
+                "We do have this too"
+            ],
+            "stock": 5,
+            "price": 20,
+            "slider": "true"
+        },
+        {
+            "dername": "Nomophobia",
+            "text": "Fear of Losing Mobile Phone Service",
+            "facts": [
+                "This is scary indeed",
+                "use carefully"
+            ],
+            "stock": 6,
+            "price": 20,
+            "slider": "true"
+        },
+        {
+            "dername": "Turophobia",
+            "text": "Fear of Cheese",
+            "facts": [
+                "Stupid",
+                "Cheese is awesome"
+            ],
+            "stock": 0,
+            "price": 20,
+            "slider": "true"
+        },
+        {
+            "dername": "Pogonophobia",
+            "text": "Fear of Beards",
+            "facts": [
+                "You cant fear Beards if you cant grow one.",
+                "mhhhh"
+            ],
+            "stock": 6,
+            "price": 20,
+            "slider": "true"
+        }
+    ];
+    
+
+    let cart = [
+         
+        {
+            "dername": "Xanthophobia",
+            "anzahl": 3,
+            "preis": 5,
+            "maxstock": 10
+        }
+    ];
+    return {products, cart};
+  }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ global.title }}: {{ page.title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{global.style}}">
+</head>
+<body>
+
+  <header>
+    BuyPhobia 
+    
+
+  </header>
+
+  <div id="flex">
+
+    <nav>{{include "navigation" }}</nav>
+
+    <article>{{ content }}</article>
+
+    <aside>{{include "warenkorb"}}</aside>
+
+  </div>
+  
+  <footer>
+    @Andre and Alex
+  </footer>
+  
+</body>
+</html>

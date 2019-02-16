@@ -1,0 +1,56 @@
+ {
+    "title": "Zemmiphobia",
+    "template": "full-html",
+    "name": "Zemmiphobia"
+ }
+---
+
+<div class="details">
+
+<div class="detpart1">
+	
+	{{global.produkt.[2].dername}}
+	<img class="imga" src="assets/Zemmiphobia.jpg" alt="Picture of a great Mole Rat">
+	
+
+</div>
+
+<div class="detpart2">
+	{{global.produkt.[2].details}} 
+</div>
+
+<div class="detpart3">
+	
+<table>
+	<tr>
+  		<td>Name:</td>
+  		<td>{{global.produkt.[2].dername}}</td>
+ 	</tr>
+	
+ 	
+ 	<tr>
+  		<td>Facts:</td>
+  		<td>{{global.produkt.[2].facts.[0]}}</td>
+ 	</tr>
+ 	<tr>
+  		<td>Facts:</td>
+  		<td>{{global.produkt.[2].facts.[1]}}</td>
+ 	</tr>
+ 	<tr>
+  		<td>Price:</td>
+  		<td>{{global.produkt.[2].price}}</td>
+ 	</tr>	
+ 	<tr>
+  		<td>Stock:</td>
+  		<td>{{global.produkt.[2].stock}}</td>
+ 	</tr>
+</table>
+
+{{#if global.produkt.[2].stock }}
+	<a href="google.com">Add to shopping cart </a>	
+{{else}}
+  <p id="stockerror"> Not in stock </p>
+{{/if}}
+</div>
+
+</div>

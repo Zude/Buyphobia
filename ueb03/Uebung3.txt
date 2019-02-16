@@ -1,0 +1,109 @@
+<!-- Vergrößerte Bildansicht
+
+
+Für die css Datei 
+
+#translatePosZ:hover {
+    transform: translateZ(200px);
+}
+
+trans {
+	opacity: 0.7;
+}
+
+__________________________________________
+
+js code
+
+let ourProducts = Array.from(document.querySelectorAll(".prods"));
+
+ourProducts.addEventListener("mouseenter", makeTrans);
+ourProducts.addEventListener("mouseout", disTrans);
+
+function makeTrans(e) {
+	for (i = 0; i < ourProducts.length; i++){
+		if (ourProducts[i] != e.target){
+			ourProducts[i].classList.toggle("trans");
+		}
+	}
+}
+
+function disTrans(e){
+	for (i = 0; i < ourProducts.length; i++){
+		if (ourProducts[i] != e.target){
+			ourProducts[i].classList.toggle("trans");
+		}
+	}
+}
+	
+
+
+<script src="main.js"></script>
+
+
+// toggle oder add/remove verwenden? ALex Fragen #quest
+
+-->
+
+
+<!--
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+
+Suchfunktion
+
+Für die css Datei
+
+#notShown {
+	display:none;
+}
+
+_____________________________________________________________
+
+js code
+
+hinzufügen der id="search" bei der Suchfunktion
+
+const proData = fhwWeb.loadJson("productdata");
+
+let ourSearch = document.querySelector("#search");		// id="search" muss noch hinzugefügt werden
+const prices = document.querySelectorAll("[data-price]");      // data-price zur Produktansicht.hbs hinzugefügt
+
+ourSearch.addEventListener("keydown", mayShow);
+
+function mayShow(e) {
+	for(i = 0; i < prices.length; i++){
+		if(e.target <= proData.price){
+			prices[i].classList.toggle("notShown");
+		}
+		else{
+			prices[i].classList.toggle("notShown");
+		}
+	}
+	
+}
+
+#quest
+
+
+<script src="main.js"></script>
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

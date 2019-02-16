@@ -1,0 +1,16 @@
+<div class="prodansi">
+  {{#each global.produkt}}
+    <div class="prods" onclick="window.open('http://localhost:8080/{{this.dername}}');">
+      <div class="part1"> {{this.dername}} </div>
+      <div class="part2"> {{this.text}} </div>
+      <div class="part3">
+      	<img class="imgu" src="assets/{{this.dername}}.jpg" alt="product-picture">
+      </div>	
+      <div class="part4"> Price:${{this.price}}  / Stock: {{this.stock}}  </div>
+    </div>
+  {{/each}}  
+</div>  
+
+
+  
+

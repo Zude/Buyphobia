@@ -1,0 +1,31 @@
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Anzahl</th>
+    <th>Einzelpreis</th>
+    <th>Gesammtpreis</th>
+  </tr>
+ {{#each page.prods}}
+ <label>
+
+  <tr class="artikel" >
+      <td>{{dername}}</td>
+      <input type="hidden" name="artikelName" value="{{dername}}">
+      <td><input  type="number"
+    name="amount"
+    min="0" 
+    step="1"
+    max="{{maxStock}}" 
+    value="{{anzahl}}"></td>
+      <td>{{preis}}</td>
+      <td>{{prodSum anzahl preis}}</td>
+  </tr>
+</label>
+  
+
+ {{/each}}  
+
+
+</table>
+<p>Total: ${{prodSumTotal session.warenkorb}}</p>   

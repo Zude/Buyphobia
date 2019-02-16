@@ -1,0 +1,22 @@
+     <h2>{{this.productService.detailProduct.dername}}</h2>
+     <h2>{{this.itemAmount}}</h2>
+
+    <div class="form-group">
+           
+               <div>
+                    <label>Amount</label> 
+                    <input type="number"  #amount />
+               </div>
+               
+               
+              
+  
+               <button (click)="onSubmit(amount.value);">Add to Cart</button>
+              
+            
+    </div>
+
+
+
+
+    

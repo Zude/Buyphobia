@@ -1,0 +1,56 @@
+ {
+    "title": "Xanthophobia",
+    "template": "full-html",
+    "name": "Papaphobia"
+ }
+---
+
+<div class="details">
+
+<div class="detpart1">
+	
+	{{global.produkt.[1].dername}}
+	<img class="imga" src="assets/Xanthophobia.jpg" alt="Picture of yellow Lemons">
+	
+
+</div>
+
+<div class="detpart4">
+	{{global.produkt.[1].details}} 
+</div>
+
+<div class="detpart3">
+	
+<table>
+	<tr>
+  		<td>Name:</td>
+  		<td>{{global.produkt.[1].dername}}</td>
+ 	</tr>
+	
+ 	
+ 	<tr>
+  		<td>Facts:</td>
+  		<td>{{global.produkt.[1].facts.[0]}}</td>
+ 	</tr>
+ 	<tr>
+  		<td>Facts:</td>
+  		<td>{{global.produkt.[1].facts.[1]}}</td>
+ 	</tr>
+ 	<tr>
+  		<td>Price:</td>
+  		<td>{{global.produkt.[1].price}}</td>
+ 	</tr>	
+ 	<tr>
+  		<td>Stock:</td>
+  		<td>{{global.produkt.[1].stock}}</td>
+ 	</tr>
+</table>
+
+{{#if global.produkt.[1].stock }}
+	<a href="google.com">Add to shopping cart </a>	
+{{else}}
+  <p id="stockerror"> Not in stock </p>
+{{/if}}
+</div>
+
+</div>

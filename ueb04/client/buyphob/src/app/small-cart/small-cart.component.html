@@ -1,0 +1,12 @@
+ <h2>My Cart</h2>
+<div class="prodansi">
+
+  <div *ngFor="let cart of this.cartService.cart">
+      <div>
+          <p>test</p>
+          {{cart.dername}}
+          {{cart.preis}}
+          {{cart.anzahl}}
+     </div>
+    </div>
+  </div>

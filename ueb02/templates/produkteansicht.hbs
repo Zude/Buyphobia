@@ -1,0 +1,33 @@
+<!-- Product View Template -->
+
+<!-- Search function -->
+<form method="GET" action="/produkte">
+  <div>
+    Suche:
+    <input type="text"
+    placeholder="Search Term"
+    value="{{page.term}}" 
+    maxlength="15"
+    minlength="3"
+    name="search">
+    <input type="submit" name="accept" value="search">
+  </div>
+</form>
+
+<!-- Fill up Page -->
+<div class="prodansi">
+  {{#each page.prods}}
+  <div class="prods" onclick="location.href='http://localhost:8080/details?dts={{dername}}';">
+    <div class="part1"> {{dername}} </div>
+    <div class="part2"> {{text}} </div>
+    <div class="part3">
+     <img class="imgu" src="assets/{{dername}}.jpg" alt="product-picture">
+   </div>	
+   <div class="part4"> Price:${{price}}  / Stock: {{stock}}  </div>
+ </div>
+ {{/each}}  
+</div>  
+
+
+
+

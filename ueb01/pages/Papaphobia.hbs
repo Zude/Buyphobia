@@ -1,0 +1,56 @@
+ {
+    "title": "Papaphobia",
+    "template": "full-html",
+    "name": "Papaphobia"
+ }
+---
+
+<div class="details">
+
+<div class="detpart1">
+	
+	{{global.produkt.[0].dername}}
+	<img class="imga" src="assets/Papaphobia.jpg" alt="Picture of the Pope">
+	
+
+</div>
+
+<div class="detpart2">
+	{{global.produkt.[0].details}} 
+</div>
+
+<div class="detpart3">
+	
+<table>
+	<tr>
+  		<td>Name:</td>
+  		<td>{{global.produkt.[0].dername}}</td>
+ 	</tr>
+	
+ 	
+ 	<tr>
+  		<td>Facts:</td>
+  		<td>{{global.produkt.[0].facts.[0]}}</td>
+ 	</tr>
+ 	<tr>
+  		<td>Facts:</td>
+  		<td>{{global.produkt.[0].facts.[1]}}</td>
+ 	</tr>
+ 	<tr>
+  		<td>Price:</td>
+  		<td>{{global.produkt.[0].price}}</td>
+ 	</tr>	
+ 	<tr>
+  		<td>Stock:</td>
+  		<td>{{global.produkt.[0].stock}}</td>
+ 	</tr>
+</table>
+
+{{#if global.produkt.[0].stock }}
+	<a href="google.com">Add to shopping cart </a>	
+{{else}}
+  <p id="stockerror"> Not in stock </p>
+{{/if}}
+</div>
+
+</div>

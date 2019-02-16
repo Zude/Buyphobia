@@ -1,0 +1,48 @@
+<!-- Common formular for user Data -->
+
+<form method="post" action="/kaufen">
+	<p>
+	Anrede:
+    <select name="Anrede">
+      <option value="1">Frau</option>
+      <option value="2">Mann</option>
+    </select>
+    </p>
+    <p>
+    Vorname:
+    <input type="text" name="Vorname" required>
+    </p>
+    <p>
+    Nachname:
+    <input type="text" name="Nachname" required>
+	</p>
+	<p>
+	Strasse:
+	<input type="Text" name="Strasse" required>	
+	</p>
+	<p>
+	Hausnummer:
+	<input type="number" name="Hausnummer" required>
+	</p>
+	<p>
+	Postleitzahl:
+		<input type="number"
+			   name="Postleitzahl"
+			   min="01001"
+			   max="99998"
+			   placeholder="01001-99998" 
+			   required>
+	</p>
+	<p>
+		E-mail:
+		<input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="text@text.text" required>
+	</p>	
+	<p>
+		Expresslieferung:
+		<input type="checkbox" name="Express">
+	</p>
+	<p>
+		<input type="submit" name="Bestellvorgang" value="Kostenpflichtig bestellen">
+	</p>
+
+</form> 

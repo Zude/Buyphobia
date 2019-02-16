@@ -1,0 +1,13 @@
+{
+  "name": "web-uebung-02",
+  "version": "1.0.0",
+  "description": "Web-Anwendungen - uebung 02",
+  "main": "server.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "andre, alex",
+  "license": "ISC",
+  "dependencies": {
+    "fhw-web": "0.8.0"
+  }
+}

@@ -1,0 +1,21 @@
+{
+	"id": "_tw1lhndbumi",
+	"createdAt": "2018-6-11 19:17:44",
+	"lastAccess": {
+		"timestamp": "2018-6-11 20:14:01",
+		"url": "/produkte"
+	},
+	"data": {
+		"session-id": "_tw1lhndbumi",
+		"warenkorb": [],
+		"Anrede": "1",
+		"Vorname": "dasd",
+		"Nachname": "asdasd",
+		"Strasse": "asda",
+		"Hausnummer": "121",
+		"Postleitzahl": "12345",
+		"email": "ads@adsda.de",
+		"Express": "on",
+		"Bestellvorgang": "Kostenpflichtig bestellen"
+	}
+}

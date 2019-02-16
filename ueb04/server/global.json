@@ -1,0 +1,13 @@
+{
+  "title": "BuyaPhobia",
+  "style": "assets/main.css",
+  "links": [
+    { "name": "Main Page", "ressource": "/" },
+    { "name": "Products", "ressource": "produkte" },
+    { "name": "Imprint", "ressource": "impressum" }
+  ]
+
+  
+
+
+}

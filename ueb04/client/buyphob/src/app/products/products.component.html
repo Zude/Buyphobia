@@ -1,0 +1,18 @@
+
+   
+<h2>My Products</h2>
+<div class="prodansi">
+  <div *ngFor="let product of this.productService.product"
+  routerLink="/details/{{product.dername}}">
+      <div >
+        <div class="part1"> {{product.dername}} </div>
+        <div class="part2"> {{product.text}} </div>
+        <div class="part3">
+         
+       </div>	
+       <div > Price:${{product.price}}  / Stock: {{product.stock}}  </div>
+     </div>
+    </div>
+  </div>
+
+

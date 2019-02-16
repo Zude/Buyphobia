@@ -1,0 +1,96 @@
+<!-- Template for product detail Site -->
+
+<div class="details">
+
+  <div class="detpart1">
+
+   <h3>{{page.prods.dername}}</h3>
+   <img class="imga" src="assets/{{page.prods.dername}}.jpg" alt="prod picture">
+  <p>{{page.prods.details}} </p>
+
+ </div>
+
+
+ <div class="detpart3">
+
+  <table>
+   <tr>
+    <td>Name:</td>
+    <td>{{page.prods.dername}}</td>
+  </tr>
+
+
+  <tr>
+    <td>Facts:</td>
+    <td>{{page.prods.facts.[0]}}</td>
+  </tr>
+  <tr>
+    <td>Facts:</td>
+    <td>{{page.prods.facts.[1]}}</td>
+  </tr>
+  <tr>
+    <td>Price:</td>
+    <td>{{page.prods.price}}</td>
+  </tr>	
+  <tr>
+    <td>Stock:</td>
+    <td>{{page.prods.stock}}</td>
+  </tr>
+</table>
+
+<!-- If stocks are not empty, give user the Ability to Add to shopping Cart -->
+{{#if page.prods.stock }}
+<form method="post" action="/fillToCart" >
+  <input type="hidden" name="nam" value="{{page.prods.dername}}" />
+  <input type="hidden" name="id" value="{{session.session-id}}" /> 
+  <p>
+    Amount:
+    <input type="number"
+    name="amount"
+    min="1"
+    max="{{page.prods.stock}}"
+    step="1"
+    value="1">
+  </p>
+  <p>
+    <input type="submit" name="accept" value="add to shopping card">
+  </p>
+</form>	
+{{else}}
+<p id="stockerror"> Not in stock </p>
+{{/if}}
+</div>
+
+
+
+<div class="detpart3">
+  <!-- User Ratings -->
+
+<h3>Ratings</h3>
+<div>
+<ul class="scrollable">
+  {{#each page.ratings.rating}}
+    <li>{{ name }} gives {{ rating }} Stars <br/>
+    Commentary: {{ Kommentar }}</li>
+    
+  {{/each}}
+</ul>
+</div>
+<form method="POST" action="/rating">
+  <input type="hidden" name="nam" value="{{page.prods.dername}}" />
+  <div>
+    Your name:
+    <input type="text" name="name" minlength="3" placeholder="Eike Harms" required><br/>
+    Your rating:
+    <input type="number" name="rating" min="1" max="5" placeholder="1-5 Stars" required><br/>
+    Commentary:<br/>
+    <textarea name="Kommentar" cols="40" rows="3">
+    </textarea><br/>
+  <input type="submit" value="Send rating">
+  </div>
+</form>
+</div>
+
+</div>
+
+<script src="assets/js/hover.js"></script>

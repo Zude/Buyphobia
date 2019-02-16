@@ -1,0 +1,39 @@
+[
+{
+  "url": "/api/products/details/",
+  "method": ["get"],
+  "controller": {
+    "file": "pageController",
+    "function": "loadDataDet"
+  },
+  "params" : {
+    "get": ["dername"]
+  }
+},{
+  "url": "/api/cart/send/*",
+  "method": ["POST"],
+  "controller": {
+    "file": "warenkorbController",
+    "function": "fill"
+  }
+ 
+},{
+  "url": "/api/products",
+  "method": ["GET"],
+  "controller": {
+    "file": "pageController",
+    "function": "loadDataProd"
+  }
+ 
+},
+{
+  "url": "/*",
+  "static": "assets/buyphob/index.html"
+}
+]
+
+
+
+
+
+

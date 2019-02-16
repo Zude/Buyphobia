@@ -1,0 +1,16 @@
+<div>Vorname: {{page.userdata.Vorname}}<br/>
+     Nachname: {{page.userdata.Nachname}}<br/>
+     Strasse, HNr.: {{page.userdata.Strasse}} {{page.userdata.Hausnummer}}<br/>
+     PLZ: {{page.userdata.Postleitzahl}}<br/>
+     E-mail: {{page.userdata.email}}<br/>
+  </div>
+<br/><br/><br/><br/><br/>
+
+
+<div style="font-size:30px">Bestellung: {{page.userdata.bestellId}}</div>
+<div><p>Bestellinformationen:</p> 
+  {{#each page.userdata.Warenkorb}}
+  <p>{{anzahl}}x {{dername}}  ${{preis}}</p> 
+  {{/each}}
+  Gesammtsumme: ${{page.userdata.Total}}
+</div>

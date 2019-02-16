@@ -1,0 +1,22 @@
+<!-- Aside Shopping Cart Template -->
+
+<h2>Shopping cart</h2>
+<div>
+	
+	{{#each session.warenkorb}}
+	<div>
+		{{anzahl}}x
+		{{dername}} <br/> 
+		Preis: ${{prodSum anzahl preis}}
+		<br/>  <br/>
+	</div>
+	{{/each}}
+
+	{{#if session.warenkorb}}
+	<p>Total: ${{prodSumTotal session.warenkorb}}</p>
+	<p>{{checkCartEmpty session.warenkorb}}</p>
+	{{/if}}
+
+</div>   
+
+<a class="visi" href="http://localhost:8080/cart">Shopping Cart</a>

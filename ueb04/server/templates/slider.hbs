@@ -1,0 +1,22 @@
+<!-- Product View Template -->
+
+
+
+<!-- Fill up Page -->
+<div class="slider">
+  {{#each page.prods}}
+  <div class="sliderElem" onclick="location.href='http://localhost:8080/details?dts={{dername}}';">
+    <div class="part1"> {{dername}} </div>
+    <div class="part3">
+     <img class="imgu" src="assets/{{dername}}.jpg" alt="product-picture">
+   </div>	
+ </div>
+ {{/each}}  
+</div>  
+
+
+
+<script src="assets/js/slider.js"></script>
+
+
+

@@ -1,0 +1,20 @@
+<!-- Shopping Cart Temlate -->
+
+<div>
+  {{#each page.prods}}
+  <div>
+   {{dername}}, 
+   Anzahl: {{anzahl}},  
+   Einzelpreis: ${{preis}},
+   Gesammtpreis: ${{prodSum anzahl preis}}
+   <form method="POST" action="/newCart" style="display: inline;">
+    <input type="hidden" name="nam" value="{{dername}}" />
+    <input type="submit" value="X">
+  </form>      
+</div>
+{{/each}}  
+<p>Total: ${{prodSumTotal page.prods}}</p>
+<form method="GET" action="/bestellen">
+ <input type="submit" value="Bestellen">
+</form> 
+</div>  

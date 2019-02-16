@@ -1,0 +1,337 @@
+body {   
+    background-image: url("header.jpg");
+}
+
+/* Hier sind alle Typspezifischen Klassen */
+
+a{
+    color: white;
+}
+a:visited{
+    color: grey;
+}
+
+footer {
+    margin: 5px;
+     color: white;
+    font-size: 80%;
+    padding: 10px;
+}
+
+nav, section, aside {
+    min-height: 600px;
+    color: white;
+    border: 1px solid grey;
+    padding: 10px;
+    border-radius: 15px
+}
+
+aside{
+    font-size: 99%;
+}
+
+table, th, td {
+    font-size: 25px;
+
+    max-width: 350px;
+    text-align: left;
+    
+    margin: 5px;
+}
+
+th, td {
+    border: 1px solid grey;
+    border-radius: 3px;
+    }
+
+table{
+    width: 350px;
+    height: 200px;
+
+}
+
+
+header{
+    height: 150px;
+    text-align: center;
+    
+    font-size: 90px;
+    
+   
+    padding: 10px;
+    color: white;
+}
+
+/* Hier wird es: Riesig */
+
+@media (min-width: 768px) {
+    nav, aside {
+        width: 200px;
+    }
+
+    section{
+        flex-grow: 1;      
+    }
+}
+
+/* Hier wird es: Groß */
+
+@media (max-width: 767px) {
+
+
+    
+   nav{
+        width: 200px;
+    }
+
+    section{
+        flex-grow: 1;
+    }
+
+    aside{
+        display: none;
+    }
+table, th, td {
+   width: auto;
+   height: auto;
+}
+     .prods{
+        margin: 5px auto;
+    }
+
+    .detpart2, .detpart1, .detpart3, .detpart4{
+    box-sizing: border-box; 
+    height: auto;
+    width: auto;
+}
+
+    
+
+.leftPos{
+    left: 0;
+    
+}
+
+.midPos{
+    left: 0;
+    display: none;
+}
+
+.rightPos{
+    right: 0;
+    display: none;
+}
+
+
+}
+
+/* Hier wird es: Klein */
+
+@media (max-width: 479px) {
+    #flex {
+       flex-direction: column;
+    }
+    aside{
+        display: none;
+    }
+    nav{
+
+        width: auto;
+
+    }
+
+    header{
+    font-size: 40px;
+}
+
+.imga{
+    height: 300px;
+    width: 300px;
+    max-width: 400px;
+}
+
+.detpart2, .detpart1, .detpart3, .detpart4{
+    box-sizing: border-box; 
+    height: auto;
+    width: auto;
+}
+
+    .prods{
+        margin: 5px auto;
+    }
+
+    table, th, td {
+   width: auto;
+   height: auto;
+}
+
+
+}
+/* Hier gebinnen die speziellen Klassen */
+
+#flex {
+    display: flex;    
+}
+
+.prods{   
+    
+    cursor: pointer;
+    background-image: url("box.jpg");
+    background-size: 100%;
+    box-sizing: border-box;
+    color: white;
+    width: 200px;
+    height: 250px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    padding: 1px;  
+    margin: 10px ; 
+}
+
+.detpart1{
+    box-sizing: border-box; 
+    height: 600px;
+    width: 450px;
+}
+
+.detpart3{
+    box-sizing: border-box; 
+    height: 600px;
+    width: 450px;
+}
+
+.detpart2{
+    box-sizing: border-box; 
+    height: 450px;
+    width: 450px;
+}
+
+.detpart1{
+    font-size: 30px;
+}
+
+.detpart4{
+    box-sizing: border-box; 
+    height: 450px;
+    width: 450px;
+    color: yellow;
+    font-size: 50px;
+}
+
+.imga{
+    height: auto;
+    width:auto;
+    max-width: 400px;
+
+}
+
+.scrollable{
+    overflow:hidden;
+    overflow-y:scroll;
+    height: 300px;
+}
+
+.prodansi{
+    
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.imgu{
+    width: 100%;
+    height: 100px;
+}
+
+.visi:visited{
+    color: black;
+}
+
+.prods:hover {
+    border-color: white;
+
+}
+.part2{
+    height: 20%;
+}
+
+.details{
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.parti{
+    text-align: center;
+}
+
+#stockerror{
+    color: red;
+}
+
+.trans {
+    opacity: 0.5;
+}
+
+.translatePosZ {
+    transition: transform .5s;
+    transform: scale(1.5);
+    z-index: 10;
+}
+
+
+
+.slider{
+    width: 612px;
+    bottom: 0px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+
+
+}
+
+.sliderElem{
+    box-sizing: border-box;
+    position: absolute;
+    margin: 2px;
+    width: 200px;
+    height: 130px;
+    border: 2px solid grey;
+    cursor: pointer;
+
+}
+.sliderElem:hover {
+    border-color: white;
+
+}
+
+.notShown {
+    position: absolute;
+    display:none;
+    
+}
+
+
+.leftPos{
+    left: 0;
+   
+}
+
+.midPos{
+    left: 204px;
+}
+
+.rightPos{
+    right: 0;
+   
+}
+
+
+
+
+
+
+
